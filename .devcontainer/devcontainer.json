@@ -1,11 +1,11 @@
 {
-  "name": "fast-codespace-live-server",
+  "name": "codespace-min",
   "image": "mcr.microsoft.com/devcontainers/universal:linux",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
-        "ms-vscode.live-server"
+        "ritwickdey.LiveServer"
       ],
       "settings": {
         "workbench.colorTheme": "Default Dark+",
