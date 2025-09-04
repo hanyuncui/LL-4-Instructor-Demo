@@ -1,12 +1,11 @@
 {
-  "name": "fast-codespace",
+  "name": "fast-codespace-live-server",
   "image": "mcr.microsoft.com/devcontainers/universal:linux",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
-        "ms-vscode.live-preview",
-        "MS-vsliveshare.vsliveshare"
+        "ms-vscode.live-server"
       ],
       "settings": {
         "workbench.colorTheme": "Default Dark+",
@@ -19,14 +18,13 @@
       }
     }
   },
-  "forwardPorts": [3000, 5500],
+  "forwardPorts": [5500],
   "portsAttributes": {
     "5500": {
-      "label": "Live preview",
+      "label": "Live Server",
       "onAutoForward": "openBrowser"
     }
   },
   "waitFor": "onCreateCommand",
   "onCreateCommand": "true"
 }
-
