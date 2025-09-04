@@ -1,15 +1,15 @@
 {
-  "name": "codespace-min",
   "image": "mcr.microsoft.com/devcontainers/universal:linux",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
-        "ritwickdey.LiveServer"
+        "ms-vscode.live-server"
       ],
       "settings": {
-        "workbench.colorTheme": "Default Dark+",
+        "livePreview.autoRefreshPreview": "On All Changes in Editor",
         "editor.minimap.enabled": false,
+        "workbench.colorTheme": "Visual Studio Dark",
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
         "editor.detectIndentation": false,
@@ -17,14 +17,5 @@
         "editor.stickyScroll.enabled": false
       }
     }
-  },
-  "forwardPorts": [5500],
-  "portsAttributes": {
-    "5500": {
-      "label": "Live Server",
-      "onAutoForward": "openBrowser"
-    }
-  },
-  "waitFor": "onCreateCommand",
-  "onCreateCommand": "true"
+  }
 }
