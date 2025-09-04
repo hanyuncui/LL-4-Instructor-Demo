@@ -1,15 +1,16 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "name": "fast-codespace",
+  "image": "mcr.microsoft.com/devcontainers/universal:linux",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
-        "ms-vscode.live-server"
+        "ms-vscode.live-preview",
+        "MS-vsliveshare.vsliveshare"
       ],
       "settings": {
-        "livePreview.autoRefreshPreview": "On All Changes in Editor",
+        "workbench.colorTheme": "Default Dark+",
         "editor.minimap.enabled": false,
-        "workbench.colorTheme": "Visual Studio Dark",
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
         "editor.detectIndentation": false,
@@ -17,5 +18,15 @@
         "editor.stickyScroll.enabled": false
       }
     }
-  }
+  },
+  "forwardPorts": [3000, 5500],
+  "portsAttributes": {
+    "5500": {
+      "label": "Live preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": "true"
 }
+
